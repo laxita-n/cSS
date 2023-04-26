@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+@import 'animate.css';
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+body{
+	animation: goaslideshow 40s infinite ease-in-out;
+	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.1)), url('goa1.jpg');
+	background-size: cover;
+	position: center;
+	background-repeat: no-repeat;
+}
+
+@keyframes goaslideshow {
+	0%{
+		background-image:url('goa11.jpg');
+	}
+	10%{
+		background-image: url('goa5.jpg');
+		
+	}
+	20%{
+		background-image: url('goa2.jpg');
+	}
+	30%{
+		background-image: url('goa3.jpg');
+	
+	}
+	40%{
+		background-image: url('goa4.jpg');
+	}
+	50%{
+		background-image: url('goa11.jpg');
+	}
+	60%{
+		background-image: url('goa6.jpg');
+	}
+	70%{
+		background-image: url('goa7.jpg');
+	}
+	80%{
+		background-image: url('goa8.jpg');
+	}
+	90%{
+		background-image: url('goa1.jpg');
+	}
+	100%{
+		background-image:  url('goa10.jpg');
+	}
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+section{
+    padding:2rem 9%;
+}
+
+.heading{
+    padding-bottom: 2rem;
+    text-align: center;
+    font-size: 4.5rem;
+    color:white
+}
+
+.heading span{
+    position: relative;
+    z-index: 0;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding:.8rem 3rem;
+    background:transparent;
+    color:var(--black);
+    cursor: pointer;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top:0; left:0; right:0;
+    padding:3rem 9%;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#logo{
+    font-size: 20PX;
+    color:white;
+    font-weight: bold;
+}
+
+#logo:hover{
+	color: orange;
+	font-size: 30px;
+	transform: rotateY(180deg);
+}
+
+
+.header .btn{
+    font-family: 'Montserrat', sans-serif;
+    margin:0 1rem;
+    font-size: 1.7rem;
+    color:white;
+	font-weight: bold;
+}
+
+.header .btn::first-letter {
+	color: orange;
+	font-size: xx-large;
+  }
+  .header .btn:hover{
+    color: orange;
+	font-size: 20px;
+}
+
+.header.active{
+    padding:2rem 9%;
+    box-shadow: var(--box-shadow);
+}
+
+#menu-btn{
+    font-size: 2.5rem;
+    color:var(--light-color);
+    display: none;
+}
+
+
+.home{
+    padding-top: 10rem;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.home h3{
+    margin-top: 25vh;
+    margin-bottom: 2vh;
+	font-size: 20px;
+	font-weight: bold;
+	color: rgb(0, 0, 0);
+	text-shadow: 0 0 3px #ffffff, 0 0 5px #ffffff;
+	font-family: 'Open Sans', sans-serif;
+}
+.home h1{
+    
+	font-size:70px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700px;
+	margin:14px 0px;
+	color: rgb(254, 233, 208);
+	text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;	
+}
+
+.home img{
+    width:100%;
+    margin:1rem 0;
+}
+
+#bttn{
+    background-color: orange;
+	font-size: 16px;
+	height: 60px;
+    width: 180px;
+	border-radius: 8px;
+	border: none;
+	margin-right: 10px;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 40px;
+	color: #ffffff;
+	font-family: 'Montserrat', sans-serif;
+	margin-top: 25px;
+	border: 3px solid white;
+}
+
+#bttn:hover{
+	background-color: transparent;
+	font-size: 19px;
+	color: #ffffff;
+	font-weight: bolder;
+	text-shadow: 0 0 3px #000000;
+	height: 70px;
+    width: 210px;
+}
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding:2rem;
+    }
+
+    .header.active{
+        padding:2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+}
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: block;
+    }
+
+    #menu-btn.fa-times{
+        transform:rotate(180deg);
+    }
+
+    #login-btn .btn{
+        display: none;
+    }
+
+    #login-btn i{
+        display: block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top:99%; left:0; right:0;
+        background: #fff;
+        border-top: var(--border);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .header .navbar a{
+        margin:2rem;
+        display: block;
+        font-size: 2rem;
+    }
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .heading{
+        font-size: 3rem;
+    }
+
+}
